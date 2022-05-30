@@ -1,0 +1,21 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+<ion-item>
+  <ion-label position="floating">User Name: </ion-label>
+  <ion-input id="user-name" type="text" formControlName="userName"></ion-input>
+ 
+</ion-item>
+<ion-item>
+  <ion-label position="floating">User Email </ion-label>
+  <ion-input id="user-name" type="text" formControlName="userEmail"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">User Phones </ion-label>
+  <ion-input id="user-phones" type="text" formControlName="userPhones"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">User Color </ion-label>
+  <ion-input id="user-color" type="text" formControlName="userColor"></ion-input>
+</ion-item>
+<ion-button type="submit"  color="my-color" expand="block" fill="outline" [disabled]="!myForm.valid">Submit</ion-button>
+
+</form>

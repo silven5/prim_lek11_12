@@ -1,0 +1,9 @@
+@import "../explore-container/explore-container.component.scss";
+$main: #1ab188;
+$main-light: lighten($main,5%);
+$main-dark: darken($main,25%);
+.button
+{
+    width:48%;
+   
+}

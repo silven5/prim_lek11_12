@@ -1,17 +1,19 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
+ <app-explore-container name="Dynamic Component"></app-explore-container>
+ </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
+<ion-card class="card">
+  <ion-header>
+    <ion-button color="success" (click)="signUp()" > Sign Up</ion-button>
+    <ion-button color="success" (click)="logIn()">Log In</ion-button>
+         
   </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-card-content>
+    <ng-template #dynamic ></ng-template>
+   
+  </ion-card-content>
+</ion-card>
 </ion-content>
