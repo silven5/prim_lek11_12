@@ -66,10 +66,14 @@ export class Tab1Page {
     this.mySubject3.subscribe(x => {
       console.log('Від другого sub:', x);
     });
+    this.mySubject3.next(6);
+    this.mySubject3.subscribe(x => {
+      console.log('Від третього sub:', x);
+    });
   }
   //Приклад4
   ras4() {
-    let mySubject = new BehaviorSubject('Куку!');
+    let mySubject = new BehaviorSubject('Hello');
     mySubject.subscribe(x => {
       console.log('Від першого sub:', x);
     });
@@ -78,6 +82,10 @@ export class Tab1Page {
       console.log('Від другого sub:', x);
     });
     mySubject.next('6');
+    mySubject.subscribe(x => {
+      console.log('Від третього sub:', x);
+    });
+    mySubject.next('7');
   }
   //Приклад5
   ras5() {
@@ -87,8 +95,10 @@ export class Tab1Page {
 
     sbj.next(7);
     sbj.next(8);
+    sbj.subscribe((vl) => console.log(`Async1: ${vl}`));
     sbj.next(9);
-
-    setTimeout(() => sbj.complete(), 3000);
+    sbj.next(10);
+    setTimeout(() => sbj.complete(), 2000);
+    sbj.next(101);
   }
 }
